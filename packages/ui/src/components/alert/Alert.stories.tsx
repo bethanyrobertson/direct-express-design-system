@@ -23,7 +23,7 @@ export default meta;
 
 export const Default: StoryFn<typeof Alert> = (args) => (
   <Alert {...args}>
-    <img src={CheckCircleSvg} alt="" style={{ width: '16px', height: '16px' }} />
+    <img src={CheckCircleSvg} alt="" style={{ width: '16px', height: '16px', filter: 'brightness(0) saturate(100%) invert(25%) sepia(55%) saturate(2000%) hue-rotate(95deg) brightness(0.9) contrast(1.1)' }} />
     <AlertTitle>Success! Your changes have been saved</AlertTitle>
     <AlertDescription>
       This is an alert with icon, title and description.
@@ -33,7 +33,7 @@ export const Default: StoryFn<typeof Alert> = (args) => (
 
 export const Destructive: StoryFn<typeof Alert> = (args) => (
   <Alert variant="destructive" {...args}>
-    <img src={ErrorSvg} alt="" style={{ width: '16px', height: '16px' }} />
+    <img src={ErrorSvg} alt="" style={{ width: '16px', height: '16px', filter: 'brightness(0) saturate(100%) invert(12%) sepia(85%) saturate(3000%) hue-rotate(340deg) brightness(0.7) contrast(1.3)' }} />
     <AlertTitle>Unable to process your payment.</AlertTitle>
     <AlertDescription>
       <p>Please verify your billing information and try again.</p>
@@ -65,7 +65,7 @@ export const DestructiveDismissible: StoryFn<typeof Alert> = () => {
   
   return (
     <Alert variant="destructive" dismissible onDismiss={() => setShowAlert(false)}>
-      <img src={ErrorSvg} alt="" style={{ width: '16px', height: '16px' }} />
+      <img src={ErrorSvg} alt="" style={{ width: '16px', height: '16px', filter: 'brightness(0) saturate(100%) invert(12%) sepia(85%) saturate(3000%) hue-rotate(340deg) brightness(0.7) contrast(1.3)' }} />
       <AlertTitle>Unable to process your payment.</AlertTitle>
       <AlertDescription>
         Please verify your billing information and try again.
@@ -76,7 +76,7 @@ export const DestructiveDismissible: StoryFn<typeof Alert> = () => {
 
 export const Success: StoryFn<typeof Alert> = (args) => (
   <Alert variant="success" {...args}>
-    <img src={CheckCircleSvg} alt="" style={{ width: '16px', height: '16px' }} />
+    <img src={CheckCircleSvg} alt="" style={{ width: '16px', height: '16px', filter: 'brightness(0) saturate(100%) invert(25%) sepia(55%) saturate(2000%) hue-rotate(95deg) brightness(0.9) contrast(1.1)' }} />
     <AlertTitle>Success!</AlertTitle>
     <AlertDescription>
       Your changes have been saved successfully.
@@ -103,7 +103,7 @@ export const SuccessDismissible: StoryFn<typeof Alert> = () => {
   
   return (
     <Alert variant="success" dismissible onDismiss={() => setShowAlert(false)}>
-      <img src={CheckCircleSvg} alt="" style={{ width: '16px', height: '16px' }} />
+      <img src={CheckCircleSvg} alt="" style={{ width: '16px', height: '16px', filter: 'brightness(0) saturate(100%) invert(25%) sepia(55%) saturate(2000%) hue-rotate(95deg) brightness(0.9) contrast(1.1)' }} />
       <AlertTitle>Success!</AlertTitle>
       <AlertDescription>
         Your changes have been saved successfully.
@@ -114,7 +114,7 @@ export const SuccessDismissible: StoryFn<typeof Alert> = () => {
 
 export const Warning: StoryFn<typeof Alert> = (args) => (
   <Alert variant="warning" {...args}>
-    <img src={WarningFilledSvg} alt="" style={{ width: '16px', height: '16px' }} />
+    <img src={WarningFilledSvg} alt="" style={{ width: '16px', height: '16px', filter: 'brightness(0) saturate(100%) invert(30%) sepia(80%) saturate(2500%) hue-rotate(35deg) brightness(0.8) contrast(1.2)' }} />
     <AlertTitle>Storage Almost Full</AlertTitle>
     <AlertDescription>
       You're using 90% of your storage capacity. Consider upgrading your plan or deleting old files.
@@ -141,7 +141,7 @@ export const WarningDismissible: StoryFn<typeof Alert> = () => {
   
   return (
     <Alert variant="warning" dismissible onDismiss={() => setShowAlert(false)}>
-      <img src={WarningFilledSvg} alt="" style={{ width: '16px', height: '16px' }} />
+      <img src={WarningFilledSvg} alt="" style={{ width: '16px', height: '16px', filter: 'brightness(0) saturate(100%) invert(30%) sepia(80%) saturate(2500%) hue-rotate(35deg) brightness(0.8) contrast(1.2)' }} />
       <AlertTitle>Storage Almost Full</AlertTitle>
       <AlertDescription>
         You're using 90% of your storage capacity. Consider upgrading your plan or deleting old files.
@@ -152,7 +152,7 @@ export const WarningDismissible: StoryFn<typeof Alert> = () => {
 
 export const Info: StoryFn<typeof Alert> = (args) => (
   <Alert variant="info" {...args}>
-    <img src={HelpFilledSvg} alt="" style={{ width: '16px', height: '16px' }} />
+    <img src={HelpFilledSvg} alt="" style={{ width: '16px', height: '16px', filter: 'brightness(0) saturate(100%) invert(8%) sepia(45%) saturate(2000%) hue-rotate(160deg) brightness(1.1) contrast(1.2)' }} />
     <AlertTitle>New Feature Available</AlertTitle>
     <AlertDescription>
       We've added a new dashboard feature. Check it out in your account settings.
@@ -179,7 +179,7 @@ export const InfoDismissible: StoryFn<typeof Alert> = () => {
   
   return (
     <Alert variant="info" dismissible onDismiss={() => setShowAlert(false)}>
-      <img src={HelpFilledSvg} alt="" style={{ width: '16px', height: '16px' }} />
+      <img src={HelpFilledSvg} alt="" style={{ width: '16px', height: '16px', filter: 'brightness(0) saturate(100%) invert(8%) sepia(45%) saturate(2000%) hue-rotate(160deg) brightness(1.1) contrast(1.2)' }} />
       <AlertTitle>New Feature Available</AlertTitle>
       <AlertDescription>
         We've added a new dashboard feature. Check it out in your account settings.
@@ -190,7 +190,7 @@ export const InfoDismissible: StoryFn<typeof Alert> = () => {
 
 export const WithIconOnly: StoryFn<typeof Alert> = (args) => (
   <Alert {...args}>
-    <img src={NotificationsFilledSvg} alt="" style={{ width: '16px', height: '16px' }} />
+    <img src={NotificationsFilledSvg} alt="" style={{ width: '16px', height: '16px', filter: 'brightness(0) saturate(100%) invert(25%) sepia(55%) saturate(2000%) hue-rotate(95deg) brightness(0.9) contrast(1.1)' }} />
     <AlertTitle>
       This Alert has a title and an icon. No description.
     </AlertTitle>
@@ -200,7 +200,7 @@ export const WithIconOnly: StoryFn<typeof Alert> = (args) => (
 export const AllVariants: StoryFn = () => (
   <div className="grid w-full max-w-xl items-start gap-4">
     <Alert>
-      <img src={CheckCircleSvg} alt="" style={{ width: '16px', height: '16px' }} />
+      <img src={CheckCircleSvg} alt="" style={{ width: '16px', height: '16px', filter: 'brightness(0) saturate(100%) invert(25%) sepia(55%) saturate(2000%) hue-rotate(95deg) brightness(0.9) contrast(1.1)' }} />
       <AlertTitle>Success! Your changes have been saved</AlertTitle>
       <AlertDescription>
         This is an alert with icon, title and description.
@@ -208,7 +208,7 @@ export const AllVariants: StoryFn = () => (
     </Alert>
     
     <Alert variant="destructive">
-      <img src={ErrorSvg} alt="" style={{ width: '16px', height: '16px' }} />
+      <img src={ErrorSvg} alt="" style={{ width: '16px', height: '16px', filter: 'brightness(0) saturate(100%) invert(12%) sepia(85%) saturate(3000%) hue-rotate(340deg) brightness(0.7) contrast(1.3)' }} />
       <AlertTitle>Unable to process your payment.</AlertTitle>
       <AlertDescription>
         <p>Please verify your billing information and try again.</p>
@@ -221,7 +221,7 @@ export const AllVariants: StoryFn = () => (
     </Alert>
     
     <Alert variant="warning">
-      <img src={WarningFilledSvg} alt="" style={{ width: '16px', height: '16px' }} />
+      <img src={WarningFilledSvg} alt="" style={{ width: '16px', height: '16px', filter: 'brightness(0) saturate(100%) invert(30%) sepia(80%) saturate(2500%) hue-rotate(35deg) brightness(0.8) contrast(1.2)' }} />
       <AlertTitle>Storage Almost Full</AlertTitle>
       <AlertDescription>
         You're using 90% of your storage capacity. Consider upgrading your plan or deleting old files.
@@ -229,7 +229,7 @@ export const AllVariants: StoryFn = () => (
     </Alert>
     
     <Alert variant="info">
-      <img src={HelpFilledSvg} alt="" style={{ width: '16px', height: '16px' }} />
+      <img src={HelpFilledSvg} alt="" style={{ width: '16px', height: '16px', filter: 'brightness(0) saturate(100%) invert(8%) sepia(45%) saturate(2000%) hue-rotate(160deg) brightness(1.1) contrast(1.2)' }} />
       <AlertTitle>New Feature Available</AlertTitle>
       <AlertDescription>
         We've added a new dashboard feature. Check it out in your account settings.
@@ -323,7 +323,7 @@ export const AllVariantsDismissible: StoryFn<typeof Alert> = () => {
               return newVisible;
             })}
           >
-            <img src={CheckCircleSvg} alt="" style={{ width: '16px', height: '16px' }} />
+            <img src={CheckCircleSvg} alt="" style={{ width: '16px', height: '16px', filter: 'brightness(0) saturate(100%) invert(25%) sepia(55%) saturate(2000%) hue-rotate(95deg) brightness(0.9) contrast(1.1)' }} />
             <AlertTitle>{alert.title}</AlertTitle>
             <AlertDescription>{alert.description}</AlertDescription>
           </Alert>
@@ -349,7 +349,7 @@ export const UsageExamples: StoryFn = () => (
         <div>
           <h3 className="text-lg font-semibold mb-2">Success Messages</h3>
           <Alert>
-            <img src={CheckCircleSvg} alt="" style={{ width: '16px', height: '16px' }} />
+            <img src={CheckCircleSvg} alt="" style={{ width: '16px', height: '16px', filter: 'brightness(0) saturate(100%) invert(25%) sepia(55%) saturate(2000%) hue-rotate(95deg) brightness(0.9) contrast(1.1)' }} />
             <AlertTitle>Account Created Successfully</AlertTitle>
             <AlertDescription>
               Welcome! Your account has been created and you can now access all features.
@@ -360,7 +360,7 @@ export const UsageExamples: StoryFn = () => (
         <div>
           <h3 className="text-lg font-semibold mb-2">Error Messages</h3>
           <Alert variant="destructive">
-            <img src={ErrorSvg} alt="" style={{ width: '16px', height: '16px' }} />
+            <img src={ErrorSvg} alt="" style={{ width: '16px', height: '16px', filter: 'brightness(0) saturate(100%) invert(12%) sepia(85%) saturate(3000%) hue-rotate(340deg) brightness(0.7) contrast(1.3)' }} />
             <AlertTitle>Login Failed</AlertTitle>
             <AlertDescription>
               The email or password you entered is incorrect. Please try again.
@@ -371,7 +371,7 @@ export const UsageExamples: StoryFn = () => (
         <div>
           <h3 className="text-lg font-semibold mb-2">Information</h3>
           <Alert>
-            <img src={NotificationsFilledSvg} alt="" style={{ width: '16px', height: '16px' }} />
+            <img src={NotificationsFilledSvg} alt="" style={{ width: '16px', height: '16px', filter: 'brightness(0) saturate(100%) invert(25%) sepia(55%) saturate(2000%) hue-rotate(95deg) brightness(0.9) contrast(1.1)' }} />
             <AlertTitle>New Feature Available</AlertTitle>
             <AlertDescription>
               We've added a new dashboard feature. Check it out in your account settings.
@@ -382,7 +382,7 @@ export const UsageExamples: StoryFn = () => (
         <div>
           <h3 className="text-lg font-semibold mb-2">Warning</h3>
           <Alert variant="destructive">
-            <img src={ErrorSvg} alt="" style={{ width: '16px', height: '16px' }} />
+            <img src={ErrorSvg} alt="" style={{ width: '16px', height: '16px', filter: 'brightness(0) saturate(100%) invert(12%) sepia(85%) saturate(3000%) hue-rotate(340deg) brightness(0.7) contrast(1.3)' }} />
             <AlertTitle>Storage Almost Full</AlertTitle>
             <AlertDescription>
               You're using 90% of your storage. Consider upgrading your plan or deleting old files.

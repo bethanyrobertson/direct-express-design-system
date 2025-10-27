@@ -7,15 +7,15 @@ const alertVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-[#E8F7DF] text-[#2E6B34] border-[#2E6B34] [&>svg]:text-[#2E6B34]",
+        default: "bg-[#E8F7DF] text-[#2E6B34] border-[#2E6B34] [&>svg]:text-[#2E6B34] [&>img]:text-[#2E6B34]",
         destructive:
-          "bg-[#FFEBE9] border-[#B39595] text-[#410002] [&>svg]:text-[#410002]",
+          "bg-[#FFEBE9] border-[#B39595] text-[#410002] [&>svg]:text-[#410002] [&>img]:text-[#410002]",
         success:
-          "bg-green-50 border-[#A4C1A4] text-green-900 [&>svg]:text-green-600",
+          "bg-green-50 border-[#A4C1A4] text-green-900 [&>svg]:text-green-600 [&>img]:text-green-600",
         warning:
-          "bg-[#FDF6E2] border-[#C9BC8C] text-[#876700] [&>svg]:text-[#7C640C]",
+          "bg-[#FDF6E2] border-[#C9BC8C] text-[#876700] [&>svg]:text-[#7C640C] [&>img]:text-[#7C640C]",
         info:
-          "bg-[#F4FFFA] border-[#9AB9B8] text-[#01332E] [&>svg]:text-[#01332E]",
+          "bg-[#F4FFFA] border-[#9AB9B8] text-[#01332E] [&>svg]:text-[#01332E] [&>img]:text-[#01332E]",
       },
     },
     defaultVariants: {
