@@ -30,19 +30,31 @@ if (typeof document !== 'undefined') {
     const style = document.createElement('style');
     style.setAttribute('data-storybook-manager', 'true');
     style.innerHTML = `
-      /* Hide ALL SVG icons in the sidebar */
+      /* Hide ALL SVG icons in the sidebar ONLY, not in content */
       nav svg,
       aside svg,
-      section svg,
+      section[data-side="left"] svg,
       [data-side="left"] svg,
       [role="navigation"] svg,
-      [class*="sidebar"] svg,
+      [class*="sidebar"] svg:not([class*="password-requirements"]),
       [id*="sidebar"] svg {
         display: none !important;
         visibility: hidden !important;
         opacity: 0 !important;
         width: 0 !important;
         height: 0 !important;
+      }
+      
+      /* Don't hide SVGs in password requirements or other components */
+      [class*="password-requirements"] svg,
+      main svg,
+      [id*="storybook-addon"] svg,
+      [data-testid] svg {
+        display: initial !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        width: initial !important;
+        height: initial !important;
       }
       
       /* Hide button icons */
