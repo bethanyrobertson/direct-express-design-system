@@ -126,7 +126,7 @@ if (typeof document !== 'undefined') {
       aside,
       [role="navigation"],
       [class*="sidebar"] {
-        min-width: 300px !important;
+        min-width: 400px !important;
         width: auto !important;
         z-index: 10 !important;
       }
@@ -140,18 +140,18 @@ if (typeof document !== 'undefined') {
       [data-parent-id] > button {
         padding-left: 24px !important;
         padding-right: 20px !important;
-        overflow: hidden !important;
-        text-overflow: ellipsis !important;
-        white-space: nowrap !important;
+        overflow: visible !important;
+        white-space: normal !important;
+        word-wrap: break-word !important;
       }
       
       /* Child items (stories) should be indented more */
       [data-item-id] > a {
         padding-left: 40px !important;
         padding-right: 20px !important;
-        overflow: hidden !important;
-        text-overflow: ellipsis !important;
-        white-space: nowrap !important;
+        overflow: visible !important;
+        white-space: normal !important;
+        word-wrap: break-word !important;
       }
       
       /* Ensure nested text is properly styled */
