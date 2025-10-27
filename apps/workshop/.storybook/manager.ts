@@ -123,6 +123,12 @@ if (typeof document !== 'undefined') {
       [class*="sidebar"] {
         min-width: 300px !important;
         width: auto !important;
+        z-index: 10 !important;
+      }
+      
+      /* Ensure sidebar doesn't get overlapped by main content */
+      [data-side="left"] {
+        position: relative !important;
       }
       
       /* Add proper padding to sidebar items - parent items (categories) */
