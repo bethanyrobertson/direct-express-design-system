@@ -123,11 +123,11 @@ if (typeof document !== 'undefined') {
       [data-item-id] > a,
       button,
       a {
-        padding-left: 50px !important;
+        padding-left: 24px !important;
         padding-right: 20px !important;
-        text-overflow: ellipsis !important;
-        overflow: hidden !important;
-        white-space: nowrap !important;
+        overflow: visible !important;
+        white-space: normal !important;
+        word-wrap: break-word !important;
       }
       
       /* Ensure nested text is properly styled */
