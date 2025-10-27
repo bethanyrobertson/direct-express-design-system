@@ -30,14 +30,12 @@ if (typeof document !== 'undefined') {
     const style = document.createElement('style');
     style.setAttribute('data-storybook-manager', 'true');
     style.innerHTML = `
-      /* Hide ALL SVG icons in the sidebar ONLY, not in content */
+      /* Hide SVG icons ONLY in the navigation sidebar */
       nav svg,
       aside svg,
       section[data-side="left"] svg,
       [data-side="left"] svg,
-      [role="navigation"] svg,
-      [class*="sidebar"] svg:not([class*="password-requirements"]),
-      [id*="sidebar"] svg {
+      [role="navigation"] svg {
         display: none !important;
         visibility: hidden !important;
         opacity: 0 !important;
@@ -45,11 +43,15 @@ if (typeof document !== 'undefined') {
         height: 0 !important;
       }
       
-      /* Don't hide SVGs in password requirements or other components */
-      [class*="password-requirements"] svg,
+      /* EXCEPT: Don't hide SVGs in story content (including password requirements) */
       main svg,
+      [role="main"] svg,
+      [class*="password-requirements"] svg,
+      .ds-password-requirements svg,
       [id*="storybook-addon"] svg,
-      [data-testid] svg {
+      [data-testid] svg,
+      article svg,
+      [data-id*="story"] svg {
         display: initial !important;
         visibility: visible !important;
         opacity: 1 !important;
@@ -117,7 +119,7 @@ if (typeof document !== 'undefined') {
       [data-item-id] > a,
       button,
       a {
-        padding-left: 20px !important;
+        padding-left: 50px !important;
         padding-right: 20px !important;
         text-overflow: ellipsis !important;
         overflow: hidden !important;
