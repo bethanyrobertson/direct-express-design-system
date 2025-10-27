@@ -42,7 +42,7 @@ const Alert = React.forwardRef<HTMLDivElement, AlertProps>(
       <div
         ref={ref}
         role="alert"
-        className={cn(alertVariants({ variant }), className)}
+        className={cn(alertVariants({ variant }), className, `ds-alert-${variant || 'default'}`)}
         {...props}
       >
         {children}

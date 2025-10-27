@@ -1479,3 +1479,34 @@ body:has(.ds-modal-backdrop) {
 .ds-virtual-card--large .ds-virtual-card__details {
   font-size: 14px;
 }
+
+/* Alert component styles to ensure background colors */
+.ds-alert-default {
+  background-color: #E8F7DF !important;
+  color: #2E6B34 !important;
+  border-color: #2E6B34 !important;
+}
+
+.ds-alert-destructive {
+  background-color: #FFEBE9 !important;
+  color: #410002 !important;
+  border-color: #B39595 !important;
+}
+
+.ds-alert-success {
+  background-color: #E8F7DF !important;
+  color: #2E6B34 !important;
+  border-color: #A4C1A4 !important;
+}
+
+.ds-alert-warning {
+  background-color: #FDF6E2 !important;
+  color: #876700 !important;
+  border-color: #C9BC8C !important;
+}
+
+.ds-alert-info {
+  background-color: #F4FFFA !important;
+  color: #01332E !important;
+  border-color: #9AB9B8 !important;
+}
