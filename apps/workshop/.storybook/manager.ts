@@ -130,7 +130,7 @@ if (typeof document !== 'undefined') {
       /* Add padding to sidebar items for proper spacing */
       [data-parent-id] > button,
       [data-item-id] > a {
-        padding-left: 20px !important;
+        padding-left: 24px !important;
         padding-right: 20px !important;
       }
       
