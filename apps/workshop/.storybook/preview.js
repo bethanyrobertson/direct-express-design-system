@@ -1,4 +1,6 @@
 import "ui/style"
+import './remove-sidebar-icons.css'
+import * as React from 'react'
 
 /** @type { import('@storybook/react').Preview } */
 const preview = {
@@ -10,7 +12,13 @@ const preview = {
         date: /Date$/,
       },
     },
+    options: {
+      sidebar: {
+        collapsedRoots: ['canvas', 'docs', 'story'],
+      },
+    },
   },
+  tags: ['autodocs'],
 };
 
 export default preview;

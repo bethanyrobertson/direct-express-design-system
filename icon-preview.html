@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Icon Library Preview</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .icon-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 1rem;
+        }
+        .icon-card {
+            border: 1px solid #e5e7eb;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            text-align: center;
+            transition: all 0.2s;
+        }
+        .icon-card:hover {
+            background-color: #f9fafb;
+            border-color: #d1d5db;
+        }
+        .category-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 p-8">
+    <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-8">
+            <h1 class="text-4xl font-bold text-gray-900 mb-4">🎨 Icon Library</h1>
+            <p class="text-xl text-gray-600">100+ icons organized by category</p>
+            <div class="mt-4">
+                <a href="http://localhost:6006" target="_blank" 
+                   class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                    📖 View in Storybook
+                </a>
+            </div>
+        </div>
+
+        <div class="space-y-8">
+            <!-- Accessibility Icons -->
+            <div class="category-header">
+                <h2 class="text-2xl font-bold">♿ Accessibility (3 icons)</h2>
+                <p class="text-blue-100">Icons for accessibility features and inclusive design</p>
+            </div>
+            <div class="icon-grid">
+                <div class="icon-card">
+                    <div class="w-8 h-8 mx-auto mb-2 bg-gray-200 rounded flex items-center justify-center">♿</div>
+                    <div class="text-sm font-mono">AccessibleFill</div>
+                </div>
+                <div class="icon-card">
+                    <div class="w-8 h-8 mx-auto mb-2 bg-gray-200 rounded flex items-center justify-center">👁️</div>
+                    <div class="text-sm font-mono">BlindFill</div>
+                </div>
+                <div class="icon-card">
+                    <div class="w-8 h-8 mx-auto mb-2 bg-gray-200 rounded flex items-center justify-center">👂</div>
+                    <div class="text-sm font-mono">EarSoundFill</div>
+                </div>
+            </div>
+
+            <!-- Action Icons -->
+            <div class="category-header">
+                <h2 class="text-2xl font-bold">🎯 Actions (24 icons)</h2>
+                <p class="text-blue-100">Action buttons, toggles, and interactive elements</p>
+            </div>
+            <div class="icon-grid">
+                <div class="icon-card">
+                    <div class="w-8 h-8 mx-auto mb-2 bg-gray-200 rounded flex items-center justify-center">➕</div>
+                    <div class="text-sm font-mono">AddCircle</div>
+                </div>
+                <div class="icon-card">
+                    <div class="w-8 h-8 mx-auto mb-2 bg-gray-200 rounded flex items-center justify-center">✅</div>
+                    <div class="text-sm font-mono">Check</div>
+                </div>
+                <div class="icon-card">
+                    <div class="w-8 h-8 mx-auto mb-2 bg-gray-200 rounded flex items-center justify-center">❌</div>
+                    <div class="text-sm font-mono">Close</div>
+                </div>
+                <div class="icon-card">
+                    <div class="w-8 h-8 mx-auto mb-2 bg-gray-200 rounded flex items-center justify-center">⭐</div>
+                    <div class="text-sm font-mono">Star</div>
+                </div>
+                <div class="icon-card">
+                    <div class="w-8 h-8 mx-auto mb-2 bg-gray-200 rounded flex items-center justify-center">🔖</div>
+                    <div class="text-sm font-mono">Bookmark</div>
+                </div>
+                <div class="icon-card">
+                    <div class="w-8 h-8 mx-auto mb-2 bg-gray-200 rounded flex items-center justify-center">❤️</div>
+                    <div class="text-sm font-mono">Favorite</div>
+                </div>
+                <div class="icon-card">
+                    <div class="w-8 h-8 mx-auto mb-2 bg-gray-200 rounded flex items-center justify-center">📋</div>
+                    <div class="text-sm font-mono">List</div>
+                </div>
+                <div class="icon-card">
+                    <div class="w-8 h-8 mx-auto mb-2 bg-gray-200 rounded flex items-center justify-center">📄</div>
+                    <div class="text-sm font-mono">Copy</div>
+                </div>
+            </div>
+
+            <!-- Alert Icons -->
+            <div class="category-header">
+                <h2 class="text-2xl font-bold">🚨 Alerts (8 icons)</h2>
+                <p class="text-blue-100">Alert, warning, and notification icons</p>
+            </div>
+            <div class="icon-grid">
+                <div class="icon-card">
+                    <div class="w-8 h-8 mx-auto mb-2 bg-red-100 rounded flex items-center justify-center text-red-600">⚠️</div>
+                    <div class="text-sm font-mono">Warning</div>
+                </div>
+                <div class="icon-card">
+                    <div class="w-8 h-8 mx-auto mb-2 bg-red-100 rounded flex items-center justify-center text-red-600">❌</div>
+                    <div class="text-sm font-mono">Error</div>
+                </div>
+                <div class="icon-card">
+                    <div class="w-8 h-8 mx-auto mb-2 bg-blue-100 rounded flex items-center justify-center text-blue-600">❓</div>
+                    <div class="text-sm font-mono">Help</div>
+                </div>
+                <div class="icon-card">
+                    <div class="w-8 h-8 mx-auto mb-2 bg-yellow-100 rounded flex items-center justify-center text-yellow-600">🔔</div>
+                    <div class="text-sm font-mono">Notification</div>
+                </div>
+            </div>
+
+            <!-- Arrow Icons -->
+            <div class="category-header">
+                <h2 class="text-2xl font-bold">➡️ Arrows (19 icons)</h2>
+                <p class="text-blue-100">Navigation arrows and directional indicators</p>
+            </div>
+            <div class="icon-grid">
+                <div class="icon-card">
+                    <div class="w-8 h-8 mx-auto mb-2 bg-gray-200 rounded flex items-center justify-center">⬅️</div>
+                    <div class="text-sm font-mono">ArrowBack</div>
+                </div>
+                <div class="icon-card">
+                    <div class="w-8 h-8 mx-auto mb-2 bg-gray-200 rounded flex items-center justify-center">➡️</div>
+                    <div class="text-sm font-mono">ArrowForward</div>
+                </div>
+                <div class="icon-card">
+                    <div class="w-8 h-8 mx-auto mb-2 bg-gray-200 rounded flex items-center justify-center">⬇️</div>
+                    <div class="text-sm font-mono">ArrowDown</div>
+                </div>
+                <div class="icon-card">
+                    <div class="w-8 h-8 mx-auto mb-2 bg-gray-200 rounded flex items-center justify-center">⬆️</div>
+                    <div class="text-sm font-mono">ArrowUp</div>
+                </div>
+                <div class="icon-card">
+                    <div class="w-8 h-8 mx-auto mb-2 bg-gray-200 rounded flex items-center justify-center">📥</div>
+                    <div class="text-sm font-mono">Download</div>
+                </div>
+                <div class="icon-card">
+                    <div class="w-8 h-8 mx-auto mb-2 bg-gray-200 rounded flex items-center justify-center">📤</div>
+                    <div class="text-sm font-mono">Upload</div>
+                </div>
+            </div>
+
+            <!-- Money Icons -->
+            <div class="category-header">
+                <h2 class="text-2xl font-bold">💰 Money (20 icons)</h2>
+                <p class="text-blue-100">Financial, payment, and money-related icons</p>
+            </div>
+            <div class="icon-grid">
+                <div class="icon-card">
+                    <div class="w-8 h-8 mx-auto mb-2 bg-green-100 rounded flex items-center justify-center text-green-600">💳</div>
+                    <div class="text-sm font-mono">Card</div>
+                </div>
+                <div class="icon-card">
+                    <div class="w-8 h-8 mx-auto mb-2 bg-green-100 rounded flex items-center justify-center text-green-600">💵</div>
+                    <div class="text-sm font-mono">Money</div>
+                </div>
+                <div class="icon-card">
+                    <div class="w-8 h-8 mx-auto mb-2 bg-green-100 rounded flex items-center justify-center text-green-600">🏦</div>
+                    <div class="text-sm font-mono">Bank</div>
+                </div>
+                <div class="icon-card">
+                    <div class="w-8 h-8 mx-auto mb-2 bg-green-100 rounded flex items-center justify-center text-green-600">💰</div>
+                    <div class="text-sm font-mono">Wallet</div>
+                </div>
+                <div class="icon-card">
+                    <div class="w-8 h-8 mx-auto mb-2 bg-green-100 rounded flex items-center justify-center text-green-600">🧾</div>
+                    <div class="text-sm font-mono">Receipt</div>
+                </div>
+                <div class="icon-card">
+                    <div class="w-8 h-8 mx-auto mb-2 bg-green-100 rounded flex items-center justify-center text-green-600">💸</div>
+                    <div class="text-sm font-mono">Payment</div>
+                </div>
+            </div>
+
+            <!-- Security Icons -->
+            <div class="category-header">
+                <h2 class="text-2xl font-bold">🔒 Security (12 icons)</h2>
+                <p class="text-blue-100">Security, authentication, and safety icons</p>
+            </div>
+            <div class="icon-grid">
+                <div class="icon-card">
+                    <div class="w-8 h-8 mx-auto mb-2 bg-blue-100 rounded flex items-center justify-center text-blue-600">🔐</div>
+                    <div class="text-sm font-mono">Lock</div>
+                </div>
+                <div class="icon-card">
+                    <div class="w-8 h-8 mx-auto mb-2 bg-blue-100 rounded flex items-center justify-center text-blue-600">🔑</div>
+                    <div class="text-sm font-mono">Key</div>
+                </div>
+                <div class="icon-card">
+                    <div class="w-8 h-8 mx-auto mb-2 bg-blue-100 rounded flex items-center justify-center text-blue-600">🛡️</div>
+                    <div class="text-sm font-mono">Shield</div>
+                </div>
+                <div class="icon-card">
+                    <div class="w-8 h-8 mx-auto mb-2 bg-blue-100 rounded flex items-center justify-center text-blue-600">👤</div>
+                    <div class="text-sm font-mono">VerifiedUser</div>
+                </div>
+            </div>
+
+            <!-- General Icons -->
+            <div class="category-header">
+                <h2 class="text-2xl font-bold">🏠 General (35+ icons)</h2>
+                <p class="text-blue-100">General purpose UI icons and common elements</p>
+            </div>
+            <div class="icon-grid">
+                <div class="icon-card">
+                    <div class="w-8 h-8 mx-auto mb-2 bg-gray-200 rounded flex items-center justify-center">🏠</div>
+                    <div class="text-sm font-mono">Home</div>
+                </div>
+                <div class="icon-card">
+                    <div class="w-8 h-8 mx-auto mb-2 bg-gray-200 rounded flex items-center justify-center">👤</div>
+                    <div class="text-sm font-mono">Person</div>
+                </div>
+                <div class="icon-card">
+                    <div class="w-8 h-8 mx-auto mb-2 bg-gray-200 rounded flex items-center justify-center">🔍</div>
+                    <div class="text-sm font-mono">Search</div>
+                </div>
+                <div class="icon-card">
+                    <div class="w-8 h-8 mx-auto mb-2 bg-gray-200 rounded flex items-center justify-center">⚙️</div>
+                    <div class="text-sm font-mono">Settings</div>
+                </div>
+                <div class="icon-card">
+                    <div class="w-8 h-8 mx-auto mb-2 bg-gray-200 rounded flex items-center justify-center">📁</div>
+                    <div class="text-sm font-mono">Folder</div>
+                </div>
+                <div class="icon-card">
+                    <div class="w-8 h-8 mx-auto mb-2 bg-gray-200 rounded flex items-center justify-center">📷</div>
+                    <div class="text-sm font-mono">Photo</div>
+                </div>
+                <div class="icon-card">
+                    <div class="w-8 h-8 mx-auto mb-2 bg-gray-200 rounded flex items-center justify-center">👁️</div>
+                    <div class="text-sm font-mono">Eye</div>
+                </div>
+                <div class="icon-card">
+                    <div class="w-8 h-8 mx-auto mb-2 bg-gray-200 rounded flex items-center justify-center">👁️‍🗨️</div>
+                    <div class="text-sm font-mono">EyeOff</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-12 text-center">
+            <div class="bg-white rounded-lg shadow-lg p-8">
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">🚀 Ready to Use!</h3>
+                <p class="text-gray-600 mb-6">
+                    Your icon library is fully organized and ready to use in your design system.
+                </p>
+                <div class="space-x-4">
+                    <a href="http://localhost:6006" target="_blank" 
+                       class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                        📖 View Full Storybook
+                    </a>
+                    <a href="http://localhost:6006/?path=/story/icons--all-icons" target="_blank" 
+                       class="inline-block bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors">
+                        🎨 Interactive Icon Browser
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -15,5 +15,9 @@
     "turbo": "latest"
   },
   "packageManager": "pnpm@8.6.10",
-  "name": "design-system-template"
+  "name": "design-system-template",
+  "dependencies": {
+    "@radix-ui/react-label": "^2.1.7",
+    "@tanstack/react-table": "^8.21.3"
+  }
 }
