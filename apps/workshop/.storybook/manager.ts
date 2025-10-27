@@ -82,33 +82,36 @@ if (typeof document !== 'undefined') {
         background-color: #013531 !important;
       }
       
-      /* Ensure all text in sidebar is white and readable */
-      nav,
-      aside,
-      [role="navigation"],
-      [class*="sidebar"],
-      [data-side="left"],
-      nav *,
-      aside *,
-      [role="navigation"] *,
-      [class*="sidebar"] *,
-      a,
-      button,
-      span,
-      div {
+      /* Ensure all text in sidebar is white and readable - but NOT on hover */
+      nav:not(:hover),
+      aside:not(:hover),
+      [role="navigation"]:not(:hover),
+      [class*="sidebar"]:not(:hover),
+      [data-side="left"]:not(:hover),
+      a:not(:hover),
+      button:not(:hover) {
         color: #FFFFFF !important;
       }
       
-      /* Custom hover color - ensure nested elements get proper color */
-      [data-parent-id]:hover,
-      [data-parent-id]:hover *,
-      [data-item-id]:hover,
-      [data-item-id]:hover *,
+      /* Custom hover color - override with higher specificity */
+      [data-parent-id]:hover button,
+      [data-parent-id]:hover span,
+      [data-parent-id]:hover a,
+      [data-parent-id]:hover div,
+      [data-item-id]:hover a,
+      [data-item-id]:hover span,
+      [data-item-id]:hover div,
       a:hover,
-      a:hover *,
-      button:hover,
-      button:hover * {
+      button:hover {
         background-color: #DDECE7 !important;
+        color: #01332E !important;
+      }
+      
+      /* Ensure hover overrides all nested text */
+      button:hover *,
+      a:hover *,
+      [data-parent-id]:hover *,
+      [data-item-id]:hover * {
         color: #01332E !important;
       }
       
