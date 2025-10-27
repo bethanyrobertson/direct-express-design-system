@@ -4,6 +4,10 @@ import { create } from '@storybook/theming';
 const customTheme = create({
   base: 'light', // Changed back to light theme
   
+  // Typography
+  fontBase: '"Noto Sans", sans-serif',
+  fontCode: '"Source Code Pro", monospace',
+  
   // UI
   appBg: '#FFFFFF',
   appContentBg: '#FBFAF8',
