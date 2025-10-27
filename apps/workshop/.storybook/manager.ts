@@ -93,11 +93,7 @@ if (typeof document !== 'undefined') {
         color: #FFFFFF !important;
       }
       
-      /* Custom hover color - override with higher specificity */
-      [data-parent-id]:hover button,
-      [data-parent-id]:hover span,
-      [data-parent-id]:hover a,
-      [data-parent-id]:hover div,
+      /* Custom hover color - only for child items, NOT category titles */
       [data-item-id]:hover a,
       [data-item-id]:hover span,
       [data-item-id]:hover div,
@@ -107,12 +103,21 @@ if (typeof document !== 'undefined') {
         color: #01332E !important;
       }
       
-      /* Ensure hover overrides all nested text */
+      /* Ensure hover overrides all nested text for child items only */
       button:hover *,
       a:hover *,
-      [data-parent-id]:hover *,
       [data-item-id]:hover * {
         color: #01332E !important;
+      }
+      
+      /* No hover state for category titles - keep them static */
+      [data-parent-id] > button:hover {
+        background-color: transparent !important;
+        color: #FFFFFF !important;
+      }
+      
+      [data-parent-id] > button:hover * {
+        color: #FFFFFF !important;
       }
       
       /* Ensure sidebar has sufficient width and text doesn't get cut off */
@@ -133,7 +138,7 @@ if (typeof document !== 'undefined') {
       
       /* Add proper padding to sidebar items - parent items (categories) */
       [data-parent-id] > button {
-        padding-left: 60px !important;
+        padding-left: 24px !important;
         padding-right: 20px !important;
         overflow: hidden !important;
         text-overflow: ellipsis !important;
@@ -142,7 +147,7 @@ if (typeof document !== 'undefined') {
       
       /* Child items (stories) should be indented more */
       [data-item-id] > a {
-        padding-left: 76px !important;
+        padding-left: 40px !important;
         padding-right: 20px !important;
         overflow: hidden !important;
         text-overflow: ellipsis !important;
