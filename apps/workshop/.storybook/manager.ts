@@ -118,16 +118,22 @@ if (typeof document !== 'undefined') {
         width: auto !important;
       }
       
-      /* Add proper padding to sidebar items */
-      [data-parent-id] > button,
-      [data-item-id] > a,
-      button,
-      a {
+      /* Add proper padding to sidebar items - parent items (categories) */
+      [data-parent-id] > button {
         padding-left: 24px !important;
         padding-right: 20px !important;
-        overflow: visible !important;
-        white-space: normal !important;
-        word-wrap: break-word !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        white-space: nowrap !important;
+      }
+      
+      /* Child items (stories) should be indented more */
+      [data-item-id] > a {
+        padding-left: 40px !important;
+        padding-right: 20px !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        white-space: nowrap !important;
       }
       
       /* Ensure nested text is properly styled */
