@@ -64,10 +64,30 @@ if (typeof document !== 'undefined') {
         background-color: #013531 !important;
       }
       
+      /* Ensure all text in sidebar is white and readable */
+      nav,
+      aside,
+      [role="navigation"],
+      [class*="sidebar"],
+      [data-side="left"],
+      nav *,
+      aside *,
+      [role="navigation"] *,
+      [class*="sidebar"] *,
+      a,
+      button,
+      span,
+      div {
+        color: #FFFFFF !important;
+      }
+      
       /* Custom hover color */
       [data-parent-id]:hover,
-      [data-item-id]:hover {
+      [data-item-id]:hover,
+      a:hover,
+      button:hover {
         background-color: #DDECE7 !important;
+        color: #01332E !important;
       }
       
       /* Adjust padding since icons are hidden */
