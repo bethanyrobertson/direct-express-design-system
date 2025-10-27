@@ -127,7 +127,7 @@ if (typeof document !== 'undefined') {
       
       /* Add proper padding to sidebar items - parent items (categories) */
       [data-parent-id] > button {
-        padding-left: 40px !important;
+        padding-left: 60px !important;
         padding-right: 20px !important;
         overflow: hidden !important;
         text-overflow: ellipsis !important;
@@ -136,7 +136,7 @@ if (typeof document !== 'undefined') {
       
       /* Child items (stories) should be indented more */
       [data-item-id] > a {
-        padding-left: 56px !important;
+        padding-left: 76px !important;
         padding-right: 20px !important;
         overflow: hidden !important;
         text-overflow: ellipsis !important;
