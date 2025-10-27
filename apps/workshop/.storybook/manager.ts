@@ -93,6 +93,27 @@ if (typeof document !== 'undefined') {
       /* Adjust padding since icons are hidden */
       [data-parent-id] > button,
       [data-item-id] > a {
+        padding-left: 20px !important;
+      }
+      
+      /* Add more spacing to all sidebar content */
+      nav,
+      aside,
+      [role="navigation"],
+      [class*="sidebar"],
+      [data-side="left"] {
+        padding-left: 16px !important;
+      }
+      
+      /* Ensure text elements have proper left padding */
+      nav *,
+      aside *,
+      [class*="sidebar"] * {
+        padding-left: 0 !important;
+      }
+      
+      /* Add padding to the container level */
+      [data-side="left"] > div:first-child {
         padding-left: 16px !important;
       }
     `;
