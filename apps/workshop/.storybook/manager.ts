@@ -136,6 +136,17 @@ if (typeof document !== 'undefined') {
         color: #FFFFFF !important;
       }
       
+      /* Apply Source Serif Pro to sidebar titles/category labels */
+      [data-parent-id] > button,
+      h1,
+      h2,
+      h3,
+      h4,
+      [class*="Title"],
+      [class*="title"] {
+        font-family: 'Source Serif Pro', serif !important;
+      }
+      
       /* Top toolbar background color */
       [class*="Toolbar"],
       [role="toolbar"],
