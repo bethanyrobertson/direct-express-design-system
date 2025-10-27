@@ -40,14 +40,14 @@ export {
   UploadSvg as Upload,
   ShareSvg as Share,
   DeleteSvg as Delete,
-  EditSvg as Edit,
+  ContentCutSvg as Edit,
   AddSvg as Add,
-  RemoveSvg as Remove,
+  CancelSvg as Remove,
   FavoriteSvg as Favorite,
   VisibilityFilledSvg as Eye,
   VisibilityOffFilledSvg as EyeOff,
   ErrorSvg as Error,
   WarningFilledSvg as Warning,
   HelpFilledSvg as Help,
-  InfoSvg as Info
+  HelpFilledSvg as Info
 } from './svg';
