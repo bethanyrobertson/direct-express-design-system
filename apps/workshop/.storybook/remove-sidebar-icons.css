@@ -117,20 +117,7 @@ div[role="treeitem"] button,
 
 /* Remove the dark sidebar background - only keep light theme */
 
-/* Force background on all nested elements within sidebar */
-nav *,
-aside *,
-[class*="sidebar"] *,
-[class*="Sidebar"] * {
-  background-color: transparent !important;
-}
-
-/* Exception for specific items that should have their own background */
-nav > div,
-aside > div,
-[class*="sidebar"] > div:first-child {
-  background-color: #013531 !important;
-}
+/* Sidebar background colors - delegate to manager.ts for more control */
 
 /* Sidebar Text Colors - only in navigation sidebar */
 [data-sidebar] a,
