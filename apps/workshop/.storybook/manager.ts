@@ -128,6 +128,23 @@ if (typeof document !== 'undefined') {
       [data-side="left"] > div:first-child {
         padding-left: 16px !important;
       }
+      
+      /* Top toolbar background color */
+      [class*="Toolbar"],
+      [role="toolbar"],
+      header,
+      [id*="toolbar"],
+      [class*="bar"]:not([class*="sidebar"]):not([class*="scrollbar"]):not([class*="sidebar"]) {
+        background-color: #013531 !important;
+      }
+      
+      /* Top toolbar text color */
+      [class*="Toolbar"] *,
+      [role="toolbar"] *,
+      header *,
+      [id*="toolbar"] * {
+        color: #FFFFFF !important;
+      }
     `;
     document.head.appendChild(style);
   };
