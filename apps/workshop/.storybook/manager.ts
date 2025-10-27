@@ -99,11 +99,15 @@ if (typeof document !== 'undefined') {
         color: #FFFFFF !important;
       }
       
-      /* Custom hover color */
+      /* Custom hover color - ensure nested elements get proper color */
       [data-parent-id]:hover,
+      [data-parent-id]:hover *,
       [data-item-id]:hover,
+      [data-item-id]:hover *,
       a:hover,
-      button:hover {
+      a:hover *,
+      button:hover,
+      button:hover * {
         background-color: #DDECE7 !important;
         color: #01332E !important;
       }
