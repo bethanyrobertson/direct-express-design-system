@@ -110,6 +110,9 @@ importers:
       '@storybook/cli':
         specifier: ^7.1.1
         version: 7.1.1
+      '@storybook/manager-api':
+        specifier: 7.1.1
+        version: 7.1.1(react-dom@18.2.0)(react@18.2.0)
       '@storybook/react':
         specifier: ^7.1.1
         version: 7.1.1(react-dom@18.2.0)(react@18.2.0)(typescript@5.0.2)
