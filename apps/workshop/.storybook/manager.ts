@@ -102,21 +102,6 @@ if (typeof document !== 'undefined') {
         color: #01332E !important;
       }
       
-      /* Adjust padding since icons are hidden */
-      [data-parent-id] > button,
-      [data-item-id] > a {
-        padding-left: 20px !important;
-      }
-      
-      /* Add more spacing to all sidebar content */
-      nav,
-      aside,
-      [role="navigation"],
-      [class*="sidebar"],
-      [data-side="left"] {
-        padding-left: 0 !important;
-      }
-      
       /* Ensure sidebar has sufficient width and text doesn't get cut off */
       [data-side="left"],
       nav,
@@ -124,14 +109,25 @@ if (typeof document !== 'undefined') {
       [role="navigation"],
       [class*="sidebar"] {
         min-width: 300px !important;
-        max-width: 350px !important;
+        width: auto !important;
       }
       
-      /* Add padding to sidebar items for proper spacing */
+      /* Add proper padding to sidebar items */
       [data-parent-id] > button,
-      [data-item-id] > a {
-        padding-left: 24px !important;
+      [data-item-id] > a,
+      button,
+      a {
+        padding-left: 20px !important;
         padding-right: 20px !important;
+        text-overflow: ellipsis !important;
+        overflow: hidden !important;
+        white-space: nowrap !important;
+      }
+      
+      /* Ensure nested text is properly styled */
+      [data-parent-id] > button *,
+      [data-item-id] > a * {
+        color: #FFFFFF !important;
       }
       
       /* Top toolbar background color */
