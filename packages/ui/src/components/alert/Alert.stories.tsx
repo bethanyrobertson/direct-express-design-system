@@ -1,45 +1,7 @@
 import { Meta, StoryFn } from "@storybook/react";
 import * as React from "react";
 import { Alert, AlertDescription, AlertTitle } from "../ui/alert";
-
-// Simple icons for the demo (you can replace with your icon system later)
-const CheckCircle2Icon = () => (
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-    <polyline points="22,4 12,14.01 9,11.01"/>
-  </svg>
-);
-
-const AlertCircleIcon = () => (
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <circle cx="12" cy="12" r="10"/>
-    <line x1="12" y1="8" x2="12" y2="12"/>
-    <line x1="12" y1="16" x2="12.01" y2="16"/>
-  </svg>
-);
-
-const PopcornIcon = () => (
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
-    <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
-  </svg>
-);
-
-const WarningIcon = () => (
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/>
-    <line x1="12" y1="9" x2="12" y2="13"/>
-    <line x1="12" y1="17" x2="12.01" y2="17"/>
-  </svg>
-);
-
-const InfoIcon = () => (
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <circle cx="12" cy="12" r="10"/>
-    <line x1="12" y1="16" x2="12" y2="12"/>
-    <line x1="12" y1="8" x2="12.01" y2="8"/>
-  </svg>
-);
+import { CheckCircleSvg, ErrorSvg, WarningFilledSvg, HelpFilledSvg, NotificationsFilledSvg } from "../../assets/icons";
 
 const meta: Meta<typeof Alert> = {
   title: 'Components/Alert',
@@ -61,7 +23,7 @@ export default meta;
 
 export const Default: StoryFn<typeof Alert> = (args) => (
   <Alert {...args}>
-    <CheckCircle2Icon />
+    <img src={CheckCircleSvg} alt="" style={{ width: '16px', height: '16px' }} />
     <AlertTitle>Success! Your changes have been saved</AlertTitle>
     <AlertDescription>
       This is an alert with icon, title and description.
@@ -71,7 +33,7 @@ export const Default: StoryFn<typeof Alert> = (args) => (
 
 export const Destructive: StoryFn<typeof Alert> = (args) => (
   <Alert variant="destructive" {...args}>
-    <AlertCircleIcon />
+    <img src={ErrorSvg} alt="" style={{ width: '16px', height: '16px' }} />
     <AlertTitle>Unable to process your payment.</AlertTitle>
     <AlertDescription>
       <p>Please verify your billing information and try again.</p>
@@ -103,7 +65,7 @@ export const DestructiveDismissible: StoryFn<typeof Alert> = () => {
   
   return (
     <Alert variant="destructive" dismissible onDismiss={() => setShowAlert(false)}>
-      <AlertCircleIcon />
+      <img src={ErrorSvg} alt="" style={{ width: '16px', height: '16px' }} />
       <AlertTitle>Unable to process your payment.</AlertTitle>
       <AlertDescription>
         Please verify your billing information and try again.
@@ -114,7 +76,7 @@ export const DestructiveDismissible: StoryFn<typeof Alert> = () => {
 
 export const Success: StoryFn<typeof Alert> = (args) => (
   <Alert variant="success" {...args}>
-    <CheckCircle2Icon />
+    <img src={CheckCircleSvg} alt="" style={{ width: '16px', height: '16px' }} />
     <AlertTitle>Success!</AlertTitle>
     <AlertDescription>
       Your changes have been saved successfully.
@@ -141,7 +103,7 @@ export const SuccessDismissible: StoryFn<typeof Alert> = () => {
   
   return (
     <Alert variant="success" dismissible onDismiss={() => setShowAlert(false)}>
-      <CheckCircle2Icon />
+      <img src={CheckCircleSvg} alt="" style={{ width: '16px', height: '16px' }} />
       <AlertTitle>Success!</AlertTitle>
       <AlertDescription>
         Your changes have been saved successfully.
@@ -152,7 +114,7 @@ export const SuccessDismissible: StoryFn<typeof Alert> = () => {
 
 export const Warning: StoryFn<typeof Alert> = (args) => (
   <Alert variant="warning" {...args}>
-    <WarningIcon />
+    <img src={WarningFilledSvg} alt="" style={{ width: '16px', height: '16px' }} />
     <AlertTitle>Storage Almost Full</AlertTitle>
     <AlertDescription>
       You're using 90% of your storage capacity. Consider upgrading your plan or deleting old files.
@@ -179,7 +141,7 @@ export const WarningDismissible: StoryFn<typeof Alert> = () => {
   
   return (
     <Alert variant="warning" dismissible onDismiss={() => setShowAlert(false)}>
-      <WarningIcon />
+      <img src={WarningFilledSvg} alt="" style={{ width: '16px', height: '16px' }} />
       <AlertTitle>Storage Almost Full</AlertTitle>
       <AlertDescription>
         You're using 90% of your storage capacity. Consider upgrading your plan or deleting old files.
@@ -190,7 +152,7 @@ export const WarningDismissible: StoryFn<typeof Alert> = () => {
 
 export const Info: StoryFn<typeof Alert> = (args) => (
   <Alert variant="info" {...args}>
-    <InfoIcon />
+    <img src={HelpFilledSvg} alt="" style={{ width: '16px', height: '16px' }} />
     <AlertTitle>New Feature Available</AlertTitle>
     <AlertDescription>
       We've added a new dashboard feature. Check it out in your account settings.
@@ -217,7 +179,7 @@ export const InfoDismissible: StoryFn<typeof Alert> = () => {
   
   return (
     <Alert variant="info" dismissible onDismiss={() => setShowAlert(false)}>
-      <InfoIcon />
+      <img src={HelpFilledSvg} alt="" style={{ width: '16px', height: '16px' }} />
       <AlertTitle>New Feature Available</AlertTitle>
       <AlertDescription>
         We've added a new dashboard feature. Check it out in your account settings.
@@ -228,7 +190,7 @@ export const InfoDismissible: StoryFn<typeof Alert> = () => {
 
 export const WithIconOnly: StoryFn<typeof Alert> = (args) => (
   <Alert {...args}>
-    <PopcornIcon />
+    <img src={NotificationsFilledSvg} alt="" style={{ width: '16px', height: '16px' }} />
     <AlertTitle>
       This Alert has a title and an icon. No description.
     </AlertTitle>
@@ -238,7 +200,7 @@ export const WithIconOnly: StoryFn<typeof Alert> = (args) => (
 export const AllVariants: StoryFn = () => (
   <div className="grid w-full max-w-xl items-start gap-4">
     <Alert>
-      <CheckCircle2Icon />
+      <img src={CheckCircleSvg} alt="" style={{ width: '16px', height: '16px' }} />
       <AlertTitle>Success! Your changes have been saved</AlertTitle>
       <AlertDescription>
         This is an alert with icon, title and description.
@@ -246,7 +208,7 @@ export const AllVariants: StoryFn = () => (
     </Alert>
     
     <Alert variant="destructive">
-      <AlertCircleIcon />
+      <img src={ErrorSvg} alt="" style={{ width: '16px', height: '16px' }} />
       <AlertTitle>Unable to process your payment.</AlertTitle>
       <AlertDescription>
         <p>Please verify your billing information and try again.</p>
@@ -259,7 +221,7 @@ export const AllVariants: StoryFn = () => (
     </Alert>
     
     <Alert variant="warning">
-      <WarningIcon />
+      <img src={WarningFilledSvg} alt="" style={{ width: '16px', height: '16px' }} />
       <AlertTitle>Storage Almost Full</AlertTitle>
       <AlertDescription>
         You're using 90% of your storage capacity. Consider upgrading your plan or deleting old files.
@@ -267,7 +229,7 @@ export const AllVariants: StoryFn = () => (
     </Alert>
     
     <Alert variant="info">
-      <InfoIcon />
+      <img src={HelpFilledSvg} alt="" style={{ width: '16px', height: '16px' }} />
       <AlertTitle>New Feature Available</AlertTitle>
       <AlertDescription>
         We've added a new dashboard feature. Check it out in your account settings.
@@ -313,7 +275,7 @@ export const Dismissible: StoryFn<typeof Alert> = () => {
   
   return (
     <Alert dismissible onDismiss={() => setShowAlert(false)}>
-      <CheckCircle2Icon />
+      <img src={CheckCircleSvg} alt="" style={{ width: '16px', height: '16px' }} />
       <AlertTitle>This alert can be dismissed</AlertTitle>
       <AlertDescription>
         Click the X button on the right to dismiss this alert.
@@ -361,7 +323,7 @@ export const AllVariantsDismissible: StoryFn<typeof Alert> = () => {
               return newVisible;
             })}
           >
-            <CheckCircle2Icon />
+            <img src={CheckCircleSvg} alt="" style={{ width: '16px', height: '16px' }} />
             <AlertTitle>{alert.title}</AlertTitle>
             <AlertDescription>{alert.description}</AlertDescription>
           </Alert>
@@ -387,7 +349,7 @@ export const UsageExamples: StoryFn = () => (
         <div>
           <h3 className="text-lg font-semibold mb-2">Success Messages</h3>
           <Alert>
-            <CheckCircle2Icon />
+            <img src={CheckCircleSvg} alt="" style={{ width: '16px', height: '16px' }} />
             <AlertTitle>Account Created Successfully</AlertTitle>
             <AlertDescription>
               Welcome! Your account has been created and you can now access all features.
@@ -398,7 +360,7 @@ export const UsageExamples: StoryFn = () => (
         <div>
           <h3 className="text-lg font-semibold mb-2">Error Messages</h3>
           <Alert variant="destructive">
-            <AlertCircleIcon />
+            <img src={ErrorSvg} alt="" style={{ width: '16px', height: '16px' }} />
             <AlertTitle>Login Failed</AlertTitle>
             <AlertDescription>
               The email or password you entered is incorrect. Please try again.
@@ -409,7 +371,7 @@ export const UsageExamples: StoryFn = () => (
         <div>
           <h3 className="text-lg font-semibold mb-2">Information</h3>
           <Alert>
-            <PopcornIcon />
+            <img src={NotificationsFilledSvg} alt="" style={{ width: '16px', height: '16px' }} />
             <AlertTitle>New Feature Available</AlertTitle>
             <AlertDescription>
               We've added a new dashboard feature. Check it out in your account settings.
@@ -420,7 +382,7 @@ export const UsageExamples: StoryFn = () => (
         <div>
           <h3 className="text-lg font-semibold mb-2">Warning</h3>
           <Alert variant="destructive">
-            <AlertCircleIcon />
+            <img src={ErrorSvg} alt="" style={{ width: '16px', height: '16px' }} />
             <AlertTitle>Storage Almost Full</AlertTitle>
             <AlertDescription>
               You're using 90% of your storage. Consider upgrading your plan or deleting old files.
