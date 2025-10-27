@@ -1,0 +1,182 @@
+/* ============================================
+   SIDEBAR COLOR VARIABLES
+   ============================================ */
+:root {
+  --sidebar-bg: #013531;
+  --sidebar-text: #e2e8f0;
+  --sidebar-active-bg: #3b82f6;
+  --sidebar-active-text: #ffffff;
+  --sidebar-hover-bg: #334155;
+  --sidebar-hover-text: #ffffff;
+  --sidebar-border: #475569;
+  --sidebar-search-bg: #0f172a;
+  --sidebar-search-text: #e2e8f0;
+  --sidebar-search-border: #334155;
+  --sidebar-scrollbar: #475569;
+  --sidebar-scrollbar-hover: #64748b;
+}
+
+/* ============================================
+   TYPOGRAPHY SYSTEM FOR STORYBOOK
+   ============================================ */
+
+/* Apply Noto Sans as default font for all Storybook UI */
+* {
+  font-family: 'Noto Sans', sans-serif !important;
+}
+
+/* Headers should use Source Serif Pro and #01332E color */
+h1, h2, h3, h4, h5, h6,
+[class*="Heading"],
+[class*="heading"],
+[class*="Title"],
+[class*="title"] {
+  font-family: 'Source Serif Pro', serif !important;
+  color: #01332E !important;
+}
+
+/* ============================================
+   MAIN CONTENT AREA BACKGROUND
+   ============================================ */
+
+/* Set light background ONLY for body/html level */
+body,
+html {
+  background-color: #FBFAF8 !important;
+}
+
+/* Storybook main containers get light background */
+#root,
+#storybook-root,
+main:not([class*="tabs"]):not([class*="Tabs"]),
+#storybook-root > div:last-child {
+  background-color: #FBFAF8 !important;
+}
+
+/* All story containers should have surface background */
+[class*="Story"],
+[class*="story"],
+[data-testid*="story"],
+.story,
+[id*="story"] > div,
+main[class*="StorybookPreview"] > div,
+div[class*="StorybookStoryWrapper"],
+div[class*="docsStory"] {
+  background-color: #FBFAF8 !important;
+}
+
+/* Canvas/preview area backgrounds */
+[class*="Canvas"],
+[class*="canvas"],
+[data-testid="canvas"],
+.sb-story,
+.sbdocs-content > div {
+  background-color: #FBFAF8 !important;
+}
+
+/* ============================================
+   SIDEBAR ICON HIDING
+   ============================================ */
+/* Hide all SVG icons in the sidebar - more aggressive targeting */
+nav svg,
+aside svg,
+section[data-sidebar] svg,
+[data-sidebar] svg,
+nav * svg,
+aside * svg,
+#storybook-explorer-menu svg,
+#storybook-explorer-menu * svg,
+[class*="sidebar"] svg,
+[class*="Sidebar"] svg,
+[id*="sidebar"] svg,
+[id*="Sidebar"] svg,
+/* Hide ALL buttons in the sidebar */
+nav button,
+aside button,
+section button,
+[data-sidebar] button,
+[class*="sidebar"] button,
+[class*="Sidebar"] button,
+/* Hide specific icon containers with data attributes */
+[data-nodetype] button,
+div[role="treeitem"] button,
+/* Hide all elements with specific Storybook classes */
+[class*="A11yIconAndDensitySelector"],
+[class*="Icon"],
+[class*="icon"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+/* ============================================
+   SIDEBAR COLOR & STYLING CUSTOMIZATION
+   ============================================ */
+
+/* Remove the dark sidebar background - only keep light theme */
+
+/* Force background on all nested elements within sidebar */
+nav *,
+aside *,
+[class*="sidebar"] *,
+[class*="Sidebar"] * {
+  background-color: transparent !important;
+}
+
+/* Exception for specific items that should have their own background */
+nav > div,
+aside > div,
+[class*="sidebar"] > div:first-child {
+  background-color: #013531 !important;
+}
+
+/* Sidebar Text Colors - only in navigation sidebar */
+[data-sidebar] a,
+[data-sidebar] button {
+  color: var(--sidebar-text, #e2e8f0) !important;
+}
+
+/* Active/Selected Item Colors - only in navigation sidebar */
+[data-sidebar] > *[aria-selected="true"] {
+  background-color: var(--sidebar-active-bg, #3b82f6) !important;
+  color: var(--sidebar-active-text, #ffffff) !important;
+}
+
+/* Hover State Colors - only in navigation sidebar */
+[data-sidebar] a:hover,
+[data-sidebar] button:hover {
+  background-color: var(--sidebar-hover-bg, #334155) !important;
+  color: var(--sidebar-hover-text, #ffffff) !important;
+}
+
+/* Sidebar Border Colors - only navigation sidebar */
+[data-sidebar] {
+  border-right-color: var(--sidebar-border, #475569) !important;
+}
+
+/* Search Bar in Sidebar */
+input[placeholder*="Find"] {
+  background-color: var(--sidebar-search-bg, #0f172a) !important;
+  color: var(--sidebar-search-text, #e2e8f0) !important;
+  border-color: var(--sidebar-search-border, #334155) !important;
+}
+
+/* Sidebar Scrollbar - only for navigation sidebar */
+[data-sidebar]::-webkit-scrollbar {
+  width: 8px;
+}
+
+[data-sidebar]::-webkit-scrollbar-track {
+  background: var(--sidebar-bg, #1e293b);
+}
+
+[data-sidebar]::-webkit-scrollbar-thumb {
+  background: var(--sidebar-scrollbar, #475569);
+  border-radius: 4px;
+}
+
+[data-sidebar]::-webkit-scrollbar-thumb:hover {
+  background: var(--sidebar-scrollbar-hover, #64748b);
+}
