@@ -114,19 +114,24 @@ if (typeof document !== 'undefined') {
       [role="navigation"],
       [class*="sidebar"],
       [data-side="left"] {
-        padding-left: 16px !important;
-      }
-      
-      /* Ensure text elements have proper left padding */
-      nav *,
-      aside *,
-      [class*="sidebar"] * {
         padding-left: 0 !important;
       }
       
-      /* Add padding to the container level */
-      [data-side="left"] > div:first-child {
-        padding-left: 16px !important;
+      /* Ensure sidebar has sufficient width and text doesn't get cut off */
+      [data-side="left"],
+      nav,
+      aside,
+      [role="navigation"],
+      [class*="sidebar"] {
+        min-width: 300px !important;
+        max-width: 350px !important;
+      }
+      
+      /* Add padding to sidebar items for proper spacing */
+      [data-parent-id] > button,
+      [data-item-id] > a {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
       }
       
       /* Top toolbar background color */
