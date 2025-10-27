@@ -22,7 +22,7 @@ const meta: Meta<typeof Alert> = {
 export default meta;
 
 export const Default: StoryFn<typeof Alert> = (args) => (
-  <Alert {...args}>
+  <Alert variant="default" {...args}>
     <img src={CheckCircleSvg} alt="" style={{ width: '16px', height: '16px', filter: 'brightness(0) saturate(100%) invert(25%) sepia(55%) saturate(2000%) hue-rotate(95deg) brightness(0.9) contrast(1.1)' }} />
     <AlertTitle>Success! Your changes have been saved</AlertTitle>
     <AlertDescription>
@@ -189,7 +189,7 @@ export const InfoDismissible: StoryFn<typeof Alert> = () => {
 };
 
 export const WithIconOnly: StoryFn<typeof Alert> = (args) => (
-  <Alert {...args}>
+  <Alert variant="default" {...args}>
     <img src={NotificationsFilledSvg} alt="" style={{ width: '16px', height: '16px', filter: 'brightness(0) saturate(100%) invert(25%) sepia(55%) saturate(2000%) hue-rotate(95deg) brightness(0.9) contrast(1.1)' }} />
     <AlertTitle>
       This Alert has a title and an icon. No description.
@@ -199,7 +199,7 @@ export const WithIconOnly: StoryFn<typeof Alert> = (args) => (
 
 export const AllVariants: StoryFn = () => (
   <div className="grid w-full max-w-xl items-start gap-4">
-    <Alert>
+    <Alert variant="default">
       <img src={CheckCircleSvg} alt="" style={{ width: '16px', height: '16px', filter: 'brightness(0) saturate(100%) invert(25%) sepia(55%) saturate(2000%) hue-rotate(95deg) brightness(0.9) contrast(1.1)' }} />
       <AlertTitle>Success! Your changes have been saved</AlertTitle>
       <AlertDescription>
@@ -240,7 +240,7 @@ export const AllVariants: StoryFn = () => (
 
 export const WithoutIcon: StoryFn = () => (
   <div className="grid w-full max-w-xl items-start gap-4">
-    <Alert>
+    <Alert variant="default">
       <AlertTitle>Information</AlertTitle>
       <AlertDescription>
         This alert doesn't have an icon, just title and description.
@@ -274,8 +274,8 @@ export const Dismissible: StoryFn<typeof Alert> = () => {
   }
   
   return (
-    <Alert dismissible onDismiss={() => setShowAlert(false)}>
-      <img src={CheckCircleSvg} alt="" style={{ width: '16px', height: '16px' }} />
+    <Alert variant="default" dismissible onDismiss={() => setShowAlert(false)}>
+      <img src={CheckCircleSvg} alt="" style={{ width: '16px', height: '16px', filter: 'brightness(0) saturate(100%) invert(25%) sepia(55%) saturate(2000%) hue-rotate(95deg) brightness(0.9) contrast(1.1)' }} />
       <AlertTitle>This alert can be dismissed</AlertTitle>
       <AlertDescription>
         Click the X button on the right to dismiss this alert.
@@ -348,7 +348,7 @@ export const UsageExamples: StoryFn = () => (
       <div className="space-y-4">
         <div>
           <h3 className="text-lg font-semibold mb-2">Success Messages</h3>
-          <Alert>
+          <Alert variant="default">
             <img src={CheckCircleSvg} alt="" style={{ width: '16px', height: '16px', filter: 'brightness(0) saturate(100%) invert(25%) sepia(55%) saturate(2000%) hue-rotate(95deg) brightness(0.9) contrast(1.1)' }} />
             <AlertTitle>Account Created Successfully</AlertTitle>
             <AlertDescription>
@@ -370,7 +370,7 @@ export const UsageExamples: StoryFn = () => (
         
         <div>
           <h3 className="text-lg font-semibold mb-2">Information</h3>
-          <Alert>
+          <Alert variant="default">
             <img src={NotificationsFilledSvg} alt="" style={{ width: '16px', height: '16px', filter: 'brightness(0) saturate(100%) invert(25%) sepia(55%) saturate(2000%) hue-rotate(95deg) brightness(0.9) contrast(1.1)' }} />
             <AlertTitle>New Feature Available</AlertTitle>
             <AlertDescription>
